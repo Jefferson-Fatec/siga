@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGA - Sistema Integrado de Gestão Acadêmica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">SIGA</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cadastros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Novo Aluno</a></li>
+                            <li><a class="dropdown-item" href="#">Novo Professor</a></li>
+                            <li><a class="dropdown-item" href="cadastro_usuarios.html">Novo Usuário</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConsultas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Consultas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownConsultas">
+                            <li><a class="dropdown-item" href="consulta_alunos.html">Alunos</a></li>
+                            <li><a class="dropdown-item" href="consulta_cursos.html">Cursos</a></li>
+                            <li><a class="dropdown-item" href="consulta_professores.html">Professores</a></li>
+                            <li><a class="dropdown-item" href="#">Turmas</a></li>
+                            <li><a class="dropdown-item" href="consulta_usuarios.html">Usuários</a></li>
+                        </ul>  
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contatos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Novo Aluno</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Novo Professor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="cadastro.html">Novo Usuário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Nova Turma</a>
+                </li>
+                <hr class="text-white-50">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="consulta_alunos.html">Alunos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="consulta_cursos.html">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="consulta_professores.html">Professores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Turmas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Usuários</a>
+                </li>
+                <hr class="text-white-50">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Contatos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <main class="container-fluid mt-5 pt-4">
+        <div class="row">
+            <div class="col-12 d-lg-none mb-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <span class="navbar-toggler-icon"></span> Menu
+                </button>
+            </div>
+
+
+
+
+            <div class="col-12">
+                <h1 class="mb-4">Bem-vindo(a) ao SIGA!</h1>
+                <p class="lead">Seu Sistema Integrado de Gestão Acadêmica.</p>
+                <p>Explore nossos cursos e mergulhe no mundo do conhecimento.</p>
+
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
+                    
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://arquivosfatec0.blob.core.windows.net/site-img/dev_sistemas.jpg" class="card-img-top" alt="Análise e Desenvolvimento de Sistemas">
+                            <div class="card-body">
+                                <h5 class="card-title">Análise e Desenvolvimento de Sistemas</h5>
+                                <p class="card-text text-muted small">
+                                    O Tecnólogo em Análise e Desenvolvimento de Sistemas analisa, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação.
+                                </p>
+                                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#descADS" aria-expanded="false" aria-controls="descADS">
+                                    Leia mais
+                                </button>
+                                <div class="collapse mt-2" id="descADS">
+                                    <div class="card card-body p-2 bg-light">
+                                        Esse profissional trabalha, também, com ferramentas computacionais, equipamentos de informática e metodologia de projetos na produção de sistemas. Raciocínio lógico, emprego de linguagens de programação e de metodologias de construção de projetos, preocupação com a qualidade, usabilidade, robustez, integridade e segurança de programas computacionais são fundamentais à atuação desse profissional.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://arquivosfatec0.blob.core.windows.net/site-img/design_midias.jpg" class="card-img-top" alt="Design de Mídias Digitais">
+                            <div class="card-body">
+                                <h5 class="card-title">Design de Mídias Digitais</h5>
+                                <p class="card-text text-muted small">
+                                    O aluno receberá noções sobre Marketing, administração de empresas, empreendedorismo e gestão de projetos.
+                                </p>
+                                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#descDMD" aria-expanded="false" aria-controls="descDMD">
+                                    Leia mais
+                                </button>
+                                <div class="collapse mt-2" id="descDMD">
+                                    <div class="card card-body p-2 bg-light">
+                                        Além destas disciplinas, o aluno terá contato com diversas disciplinas da área de Design e Informática, tais como: algoritmos, programação, banco de dados, criação de site, programação para dispositivos móveis e para ambientes multimídia, design digital, comunicação visual, gestão de marcas, design audiovisual, entre outras. Além disso, habilidades para leitura e interpretação de textos em português e inglês são fundamentais para o aprendizado durante o curso. Hoje, o mercado não aceita mais profissionais que se isolam na frente do computador. As empresas exigem pessoas versáteis, dinâmicas, que saibam trabalhar em equipe.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/jogos_digitais.jpg" class="card-img-top" alt="Jogos Digitais">
+                            <div class="card-body">
+                                <h5 class="card-title">Jogos Digitais</h5>
+                                <p class="card-text text-muted small">
+                                    Este curso prepara para o desenvolvimento do código base do jogo, criação da física, implementação da mecânica, entre outras atribuições.
+                                </p>
+                                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#descJD" aria-expanded="false" aria-controls="descJD">
+                                    Leia mais
+                                </button>
+                                <div class="collapse mt-2" id="descJD">
+                                    <div class="card card-body p-2 bg-light">
+                                        **Perfil profissional:** Programador, Artista, Game Designer.
+                                        **Campo de atuação:** Empresas e estúdios de desenvolvimento de Jogos Digitais, Instituições educacionais, Agências de publicidade, Produtoras de internet, Veículos de comunicação em geral, Editoras, Consultor ou Empresário autônomo.
+                                        **Profissões associadas:** Produtor Audiovisual; Especialista em micro transações; Profissões emergentes relacionadas a e-Sports (esportes eletrônicos).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/logistica.jpg" class="card-img-top" alt="Logística">
+                            <div class="card-body">
+                                <h5 class="card-title">Logística</h5>
+                                <p class="card-text text-muted small">
+                                    O Tecnólogo em Logística é o profissional especializado em armazenagem, distribuição e transporte.
+                                </p>
+                                <button class="btn btn-primary btn-sm mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#descLog" aria-expanded="false" aria-controls="descLog">
+                                    Leia mais
+                                </button>
+                                <div class="collapse mt-2" id="descLog">
+                                    <div class="card card-body p-2 bg-light">
+                                        Atuando na área logística de uma organização, planeja e coordena a movimentação física e de informações sobre as operações multimodais e intermodais de transporte, incluindo o gerenciamento de pessoas para proporcionar fluxo otimizado ao longo da cadeia de suprimentos.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-5 text-center text-muted">
+                    Conheça mais sobre as oportunidades que o SIGA pode te oferecer!
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 SIGA. Todos os direitos reservados. Projeto de Faculdade.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

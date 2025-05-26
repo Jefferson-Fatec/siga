@@ -1,0 +1,324 @@
+/* style.css
+   Este arquivo contém todo o estilo visual (CSS) do nosso projeto SIGA.
+   Ele diz ao navegador como os elementos HTML devem parecer: cores, tamanhos,
+   posicionamento, fontes, etc.
+*/
+
+/* --- Estilos Globais do Corpo da Página (body) --- */
+body {
+    /* padding-top: 56px;
+       Cria um espaço no topo da página igual à altura da nossa barra de navegação (navbar).
+       Isso é importante porque a navbar está "fixa" no topo (fixed-top) e, sem isso,
+       o conteúdo da página ficaria escondido por baixo dela.
+    */
+    padding-top: 56px;
+    
+    /* background-color: #f8f9fa;
+       Define a cor de fundo de todas as páginas. #f8f9fa é um tom de cinza bem claro,
+       quase branco, do Bootstrap.
+    */
+    background-color: #f8f9fa;
+}
+
+/* --- Estilos da Barra de Navegação (Navbar) --- */
+
+/* .navbar-brand
+   Aplica estilo ao texto da marca/logo na navbar (onde está "SIGA").
+*/
+.navbar-brand {
+    /* font-weight: bold;
+       Deixa o texto em negrito para se destacar.
+    */
+    font-weight: bold;
+}
+
+/* .navbar-nav .nav-link
+   Aplica estilo aos links de navegação dentro da navbar (Home, Cadastros, Consultas, etc.).
+*/
+.navbar-nav .nav-link {
+    /* font-weight: 500;
+       Define uma espessura de fonte um pouco mais fina que o negrito padrão,
+       mas ainda assim destacada.
+    */
+    font-weight: 500;
+}
+
+/* --- Estilos do Menu Lateral (Offcanvas) para Mobile --- */
+
+/* .offcanvas
+   Define as características do menu lateral que aparece em telas pequenas (celulares, tablets).
+*/
+.offcanvas {
+    /* width: 250px;
+       Define a largura do menu lateral quando ele desliza para fora.
+    */
+    width: 250px;
+}
+
+/* .offcanvas-header
+   Aplica estilo ao cabeçalho do menu lateral (onde está "Menu" e o botão de fechar).
+*/
+.offcanvas-header {
+    /* background-color: #0d6efd;
+       Define a cor de fundo do cabeçalho do offcanvas, usando a cor "primary" do Bootstrap.
+    */
+    background-color: #0d6efd;
+    /* color: white;
+       Define a cor do texto no cabeçalho como branco.
+    */
+    color: white;
+}
+
+/* .offcanvas-body .nav-link
+   Aplica estilo aos links de navegação dentro do corpo do menu lateral.
+*/
+.offcanvas-body .nav-link {
+    /* padding: 0.75rem 1rem;
+       Adiciona um espaçamento interno aos links para torná-los mais fáceis de clicar.
+       'rem' é uma unidade de medida responsiva baseada no tamanho da fonte padrão.
+    */
+    padding: 0.75rem 1rem;
+    /* color: rgba(255, 255, 255, 0.75);
+       Define uma cor branca semitransparente para os links, para que se misturem
+       um pouco com o fundo escuro.
+    */
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* .offcanvas-body .nav-link:hover
+   Define o estilo quando o mouse passa por cima de um link no menu lateral.
+*/
+.offcanvas-body .nav-link:hover {
+    /* color: white;
+       Muda a cor do texto para branco sólido no hover.
+    */
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.1);
+       Adiciona um leve fundo branco transparente para indicar que o link está sob o mouse.
+    */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Ajustes de Conteúdo Principal para Telas Grandes --- */
+
+/* @media (min-width: 992px)
+   Esta é uma "media query". Ela aplica os estilos APENAS quando a largura da tela
+   for de 992 pixels ou mais (tipicamente telas de laptops e desktops maiores).
+*/
+@media (min-width: 992px) {
+    body {
+        /* padding-top: 56px;
+           Garante que o espaçamento do topo para a navbar fixa também funcione
+           corretamente em telas maiores.
+        */
+        padding-top: 56px;
+    }
+}
+
+/* --- Estilos dos Cards (Ex: Cards dos Cursos na Página Inicial) --- */
+
+/* .card
+   Define o estilo base para todos os elementos com a classe 'card' do Bootstrap.
+*/
+.card {
+    /* border: none;
+       Remove a borda padrão do card.
+    */
+    border: none;
+    /* border-radius: 0.75rem;
+       Arredonda os cantos do card, dando um visual mais suave.
+    */
+    border-radius: 0.75rem;
+    /* overflow: hidden;
+       Garante que qualquer conteúdo que "extrapole" o card (como imagens
+       que excedam os limites do 'border-radius') seja cortado.
+    */
+    overflow: hidden;
+    /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+       Cria uma transição suave (animação) quando as propriedades 'transform'
+       ou 'box-shadow' mudam, como no efeito hover.
+    */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* .card:hover
+   Aplica estilos quando o mouse passa por cima de um card.
+*/
+.card:hover {
+    /* transform: translateY(-5px);
+       Move o card ligeiramente para cima (-5 pixels no eixo Y),
+       criando um efeito de "flutuação".
+    */
+    transform: translateY(-5px);
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+       Adiciona uma sombra ao card, que se torna mais pronunciada no hover,
+       reforçando o efeito de flutuação. '!important' é usado para
+       garantir que este estilo sobrescreva qualquer outro definido pelo Bootstrap.
+    */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* .card-img-top
+   Estilo aplicado à imagem no topo do card (as imagens dos cursos).
+*/
+.card-img-top {
+    /* height: 180px;
+       Define uma altura fixa para todas as imagens dos cards.
+       Isso ajuda a manter os cards com o mesmo tamanho inicial,
+       independentemente da proporção original da imagem.
+    */
+    height: 180px;
+    /* object-fit: cover;
+       Garante que a imagem preencha completamente a área definida
+       (180px de altura e a largura do card), cortando as partes
+       excedentes da imagem para evitar distorção.
+    */
+    object-fit: cover;
+}
+
+/* .card-body
+   Estilo aplicado ao corpo do card (onde fica o título, texto e botões).
+*/
+.card-body {
+    /* padding: 1.25rem;
+       Adiciona um espaçamento interno ao corpo do card.
+    */
+    padding: 1.25rem;
+}
+
+/* .card-title
+   Estilo aplicado ao título de cada card (ex: "Análise e Desenvolvimento de Sistemas").
+*/
+.card-title {
+    /* font-size: 1.3rem;
+       Define o tamanho da fonte.
+    */
+    font-size: 1.3rem;
+    /* font-weight: 600;
+       Deixa o texto um pouco mais em negrito que o padrão.
+    */
+    font-weight: 600;
+    /* color: #343a40;
+       Define a cor do texto para um tom escuro de cinza.
+    */
+    color: #343a40;
+    /* margin-bottom: 0.75rem;
+       Adiciona um espaçamento abaixo do título.
+    */
+    margin-bottom: 0.75rem;
+}
+
+/* .card-text
+   Estilo aplicado aos parágrafos de texto dentro do card.
+*/
+.card-text {
+    /* font-size: 0.9rem;
+       Define o tamanho da fonte, um pouco menor para o texto de descrição.
+    */
+    font-size: 0.9rem;
+    /* line-height: 1.5;
+       Define a altura da linha, melhorando a legibilidade.
+    */
+    line-height: 1.5;
+}
+
+/* --- Estilos Específicos para Formulários de Login/Cadastro --- */
+
+/* .form-control::placeholder
+   Aplica estilo ao texto de placeholder (texto "fantasma" dentro dos campos de input).
+*/
+.form-control::placeholder {
+    /* color: #6c757d;
+       Define a cor do placeholder para um cinza médio.
+    */
+    color: #6c757d;
+    /* opacity: 1;
+       Garante que o placeholder seja totalmente visível (às vezes navegadores dão opacidade).
+    */
+    opacity: 1;
+}
+
+/* .form-control:focus
+   Estilo aplicado aos campos de input quando eles estão em foco (quando o usuário clica neles).
+*/
+.form-control:focus {
+    /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+       Adiciona uma sombra azul clara ao redor do campo, usando a cor "primary" do Bootstrap,
+       indicando que o campo está ativo.
+    */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    /* border-color: #86b7fe;
+       Muda a cor da borda do campo para um azul mais claro no foco.
+    */
+    border-color: #86b7fe;
+}
+
+/* --- Estilos para Mensagens de Validação do Formulário (Feedback) --- */
+
+/* .form-control.is-invalid ~ .invalid-feedback
+   Esta regra seleciona o elemento 'invalid-feedback' que é um "irmão"
+   adjacente (~) de um 'form-control' que tem as classes 'is-invalid'.
+   Isso faz com que a mensagem de erro (definida pelo Bootstrap) apareça.
+*/
+.form-control.is-invalid ~ .invalid-feedback {
+    /* display: block;
+       Muda o display padrão de 'none' para 'block', tornando a mensagem visível.
+    */
+    display: block;
+}
+
+/* .form-control.is-valid ~ .valid-feedback
+   Similar ao anterior, mas para mensagens de sucesso ('valid-feedback').
+   Embora menos comum em formulários para usuários, é para consistência.
+*/
+.form-control.is-valid ~ .valid-feedback {
+    /* display: block;
+       Muda o display para 'block', tornando a mensagem de sucesso visível.
+    */
+    display: block;
+}
+
+/* --- Estilos para a Caixa de Mensagens de Sucesso/Erro Geral (no Cadastro) --- */
+
+/* #mensagemCadastro
+   Estilo aplicado à div que mostra mensagens de sucesso ou erro no formulário de cadastro.
+*/
+#mensagemCadastro {
+    /* margin-bottom: 1.5rem;
+       Adiciona um espaçamento abaixo da caixa de mensagem.
+    */
+    margin-bottom: 1.5rem;
+    /* text-align: center;
+       Centraliza o texto da mensagem.
+    */
+    text-align: center;
+}
+
+/* --- Estilos Adicionais para Cards (já existiam no seu código, consolidado) --- */
+
+/* .card-img-top
+   (Este bloco de código estava duplicado no seu CSS, foi consolidado aqui.)
+   Define a altura fixa e como a imagem deve se ajustar dentro do espaço
+   para as imagens no topo dos cards.
+*/
+.card-img-top {
+    height: 180px; /* Altura fixa para as imagens dos cards - ajuste se as novas imagens forem muito diferentes */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+}
+
+/* .card-body .collapse.show + .btn-primary
+   Estilo opcional para o botão "Leia mais" nos cards da página inicial.
+   Quando o conteúdo expande (o 'collapse' tem a classe 'show'),
+   este estilo é aplicado ao botão '+ btn-primary' que o precedeu diretamente.
+*/
+.card-body .collapse.show + .btn-primary {
+    /* background-color: #0b5ed7;
+       Muda a cor de fundo do botão para um tom ligeiramente diferente quando o conteúdo está expandido,
+       dando um feedback visual.
+    */
+    background-color: #0b5ed7;
+    /* border-color: #0a58ca;
+       Muda a cor da borda do botão.
+    */
+    border-color: #0a58ca;
+}
