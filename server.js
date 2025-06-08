@@ -58,6 +58,7 @@ const dbConfig = {
     // 'port': A porta padrão para conexões SQL Server é 1433.
     // Usamos 'parseInt' caso a variável de ambiente venha como texto.
     port: parseInt(process.env.DB_PORT) || 1433
+    
 };
 
 // --- 4. Middlewares (Funções que Processam Pedidos Antes das Rotas) ---
